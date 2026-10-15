@@ -1,0 +1,117 @@
+#root{
+    -fx-background-color: #1d1d1d;    
+}
+#titulo{
+    -fx-font-size: 25;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-text-fill: white;
+    -fx-label-padding: 5 0 10 0;
+    -fx-translate-X: 20;
+    -fx-translate-Y: 0;
+}
+#saldo{
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-text-fill: white;    
+    -fx-font-size:21;
+    -fx-translate-X:450;
+    -fx-translate-Y: 10;    
+}
+#textSaldo{
+    -fx-font-family: "Segoe UI Light";
+    -fx-text-fill: white;    
+    -fx-translate-X:410;
+    -fx-translate-Y: 15;
+}
+#textReceitas{
+    -fx-font-family: "Segoe UI Light";
+    -fx-text-fill: white;
+    -fx-opacity: 0.7;
+    -fx-font-size:18;
+    -fx-translate-Y: 50;
+    -fx-translate-X:50;
+}
+#textDespesas{
+    -fx-font-family: "Segoe UI Light";
+    -fx-text-fill: white;
+    -fx-opacity: 0.7;
+    -fx-font-size:18;   
+    -fx-translate-X:300;
+    -fx-translate-Y: 50;
+}
+#tabelaDespesas{
+    -fx-base: #1d1d1d;
+    -fx-control-inner-background: #1d1d1d;
+    -fx-background-color: #1d1d1d;
+    -fx-table-cell-border-color: transparent;
+    -fx-table-header-border-color: transparent;
+    -fx-padding: 0 0 0 0;
+    -fx-translate-Y: 75;
+    -fx-translate-X:300;
+}
+#tabelaReceitas{
+    -fx-base: #1d1d1d;
+    -fx-control-inner-background: #1d1d1d;
+    -fx-background-color: #1d1d1d;
+    -fx-table-cell-border-color: transparent;
+    -fx-table-header-border-color: transparent;
+    -fx-translate-Y: 75;
+    -fx-translate-X:50;
+}
+.table-row-cell {
+    -fx-background: -fx-control-inner-background;
+    -fx-background-color: -fx-table-cell-border-color, -fx-background;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0;
+    -fx-text-fill: -fx-text-background-color;
+}
+.table-view:focused{
+    -fx-background-color: transparent;
+    -fx-table-cell-border-color: #252525;
+}
+.table-row-cell:filled:selected {
+    -fx-background-color: #5e5f5f;
+    -fx-background-insets: 0;
+    -fx-background-radius: 1;
+}
+#buttonNovaTransacao{
+    -fx-border-color: #e2e2e2;
+    -fx-border-width: 2;
+    -fx-background-radius: 0;
+    -fx-background-color: #1d1d1d;
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-text-fill: #d8d8d8;
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;
+    -fx-translate-X:423;
+    -fx-translate-Y: 490;
+}
+#buttonEditarTransacao{
+    -fx-border-color: #e2e2e2;
+    -fx-border-width: 2;
+    -fx-background-radius: 0;
+    -fx-background-color: #1d1d1d;
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-text-fill: #d8d8d8;
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;
+    -fx-translate-X:314;
+    -fx-translate-Y: 490;
+}
+#buttonExcluirTransacao{
+    -fx-border-color: #e2e2e2;
+    -fx-border-width: 2;
+    -fx-background-radius: 0;
+    -fx-background-color: #1d1d1d;
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-text-fill: #d8d8d8;
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;
+    -fx-translate-X:203;
+    -fx-translate-Y: 490;
+}
+#buttonExcluirTransacao:hover, #buttonEditarTransacao:hover, #buttonNovaTransacao:hover{
+    -fx-background-color:#3a3a3a;
+}
+#saldoNegativo{
+    -fx-font-size:21;
+    -fx-translate-X:450;
+    -fx-translate-Y: 10; 
+    -fx-text-fill: red;
+}
