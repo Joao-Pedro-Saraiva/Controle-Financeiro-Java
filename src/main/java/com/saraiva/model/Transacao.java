@@ -1,33 +1,41 @@
 package com.saraiva.model;
 
 public class Transacao {
+    private int id;
     private String categoria;
     private double valor;
     private String tipo;
     private String data;
 
-    public Transacao(String categoria, double valor, String tipo, String data){
-        this.categoria = categoria;
-        this.valor = valor;
-        this.tipo = tipo;
-        this.data = data;
+    public Transacao(int id, String categoria, double valor, String tipo, String data){
+        setId(id);
+        setCategoria(categoria);
+        setValor(valor);
+        setTipo(tipo);
+        setData(data);
     }
     @Override 
     public String toString(){
         String transacao = this.categoria + " " + (this.tipo.equals("Receita") ? "+":"-") + this.valor;
         return transacao;
     }
+    public int getId() {
+        return this.id;
+    }
     public String getCategoria() {
-        return categoria;
+        return this.categoria;
     }
     public double getValor() {
-        return valor;
+        return this.valor;
     }
     public String getTipo() {
-        return tipo;
+        return this.tipo;
     }
     public String getData() {
-        return data;
+        return this.data;
+    }
+    public void setId(int id){
+        this.id = id;
     }
     public void setCategoria(String categoria) {
         this.categoria = categoria;

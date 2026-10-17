@@ -7,7 +7,7 @@ import java.sql.SQLException;
 public class ConnectionFactory {
     private String url = "jdbc:mysql://localhost:3306/financeiro";
     private String user = "root";
-    private String password = "";
+    private String password = new Password().getPassword();
     public Connection getConnect(){
         try{
             return DriverManager.getConnection(url, user, password);

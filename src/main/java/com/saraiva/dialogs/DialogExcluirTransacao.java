@@ -1,6 +1,7 @@
 package com.saraiva.dialogs;
 
 import com.saraiva.dao.TransacaoDAO;
+import com.saraiva.model.Transacao;
 import com.saraiva.service.Financeiro;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
@@ -15,9 +16,11 @@ public class DialogExcluirTransacao extends AbstractDialog{
 
         Button excluirTransacao = new Button("Excluir");
         excluirTransacao.setOnAction(exclui->{
-            String transacao = choiceTransacoes.getValue();
-            transacaoDAO.excluirSQL(financeiro.getTransacao(transacao));
-            financeiro.excluirTransacao(financeiro.getTransacao(transacao));
+            int indice = choiceTransacoes.getSelectionModel().getSelectedIndex();
+            Transacao transacao = financeiro.getTransacoes().get(indice);
+        
+            transacaoDAO.excluirSQL(financeiro.getTransacao(transacao.getId()));
+            financeiro.excluirTransacao(financeiro.getTransacao(transacao.getId()));
             fecharDialog();
         });
 

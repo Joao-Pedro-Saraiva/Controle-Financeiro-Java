@@ -2,6 +2,7 @@ package com.saraiva.dialogs;
 
 import java.time.format.DateTimeFormatter;
 import com.saraiva.dao.TransacaoDAO;
+import com.saraiva.model.Transacao;
 import com.saraiva.service.Financeiro;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
@@ -31,10 +32,12 @@ public class DialogNovaTransacao extends AbstractDialog {
 
                 if(tipo.equals("Receita")){
                     System.out.println("Receita Cadastrada");
-                    transacaoDAO.adicionarSQL(financeiro.cadastrarReceita(categoria, valor, dataFormatada));
+                    Transacao transacao = financeiro.cadastrarReceita(categoria, valor, dataFormatada);
+                    transacao.setId(transacaoDAO.adicionarSQL(transacao));
                 } else {
                     System.out.println("Despesa Cadastrada");
-                    transacaoDAO.adicionarSQL(financeiro.cadastrarDespesa(categoria, valor, dataFormatada));
+                    Transacao transacao = financeiro.cadastrarDespesa(categoria, valor, dataFormatada);
+                    transacao.setId(transacaoDAO.adicionarSQL(transacao));
                 }
                 fecharDialog();
             } catch(NumberFormatException expetion){

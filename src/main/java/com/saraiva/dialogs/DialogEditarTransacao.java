@@ -26,17 +26,15 @@ public class DialogEditarTransacao extends AbstractDialog{
         Button editarTransacao = new Button("Editar Transação");
         editarTransacao.setOnAction(editar ->{
             try{
-                String transacao = choiceTransacoes.getValue();
+                int indice = choiceTransacoes.getSelectionModel().getSelectedIndex();
+                Transacao transacao = financeiro.getTransacoes().get(indice);
                 double valor = Double.parseDouble(valorField.getText());
                 String categoria = categoriaField.getText();
                 String dataFormatada = datePicker.getValue().format(DateTimeFormatter.ofPattern("dd-MM-yyyy"));
                 String tipo = tipoChoice.getValue();
-                Transacao transacaoEditar = financeiro.getTransacao(transacao);
-                String categoriaAntiga = transacaoEditar.getCategoria();
-                double valorAntigo = transacaoEditar.getValor();
                 
-                financeiro.editarTransacao(financeiro.getTransacao(transacao), categoria, valor, tipo, dataFormatada);
-                transacaoDAO.editarSQL(categoriaAntiga, valorAntigo, transacaoEditar);
+                financeiro.editarTransacao(financeiro.getTransacao(transacao.getId()), categoria, valor, tipo, dataFormatada);
+                transacaoDAO.editarSQL(financeiro.getTransacao(transacao.getId()));
                 fecharDialog();
             } catch(NumberFormatException expetion){
                 Alert alertaErro = new Alert(AlertType.ERROR);

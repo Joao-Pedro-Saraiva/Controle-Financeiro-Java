@@ -8,8 +8,6 @@ Aplicação desktop desenvolvida em Java com JavaFX para gerenciamento de receit
 - Consulta do saldo financeiro.
 - Edição de transações.
 - Exclusão de transações.
-- Validações adicionais de entrada.
-- Novas funcionalidades em desenvolvimento.
 
 ## 🛠️ Tecnologias utilizadas
 - Java — linguagem de programação.
