@@ -23,6 +23,7 @@ public abstract class AbstractDialog {
     AbstractDialog(){
         dialogGrid.setId("gridpane");
         dialog.getDialogPane().setContent(dialogGrid);
+        dialog.getDialogPane().lookup(".button-bar").setStyle("-fx-min-height: 0; -fx-pref-height: 0; -fx-max-height: 0; -fx-padding: 0;");
         dialogGrid.getStylesheets().add(getClass().getResource("/dialog.css").toExternalForm());
     }
 

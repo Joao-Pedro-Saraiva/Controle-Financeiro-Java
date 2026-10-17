@@ -1,12 +1,6 @@
 #gridpane{
     -fx-background-color: #1d1d1d;
 }
-.button-bar {
-    -fx-min-height: 0; 
-    -fx-pref-height: 0; 
-    -fx-max-height: 0; 
-    -fx-padding: 0;
-}
 .label{
     -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
     -fx-text-fill: #d8d8d8;
