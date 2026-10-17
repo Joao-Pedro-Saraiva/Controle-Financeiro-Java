@@ -1,2 +1,4 @@
+# Senha do banco de Dados
 Password.java
-/target/
+# Arquuivos compilados pelo Maven
+target/
